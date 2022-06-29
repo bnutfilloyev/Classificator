@@ -9,7 +9,7 @@ COPY poetry.lock pyproject.toml ./
 RUN pip install --upgrade pip && \
     pip install poetry && \
     poetry config virtualenvs.create false && \
-    poetry install --no-dev \
+    poetry install --no-dev
 
 RUN pip install lucifer-ml
 
