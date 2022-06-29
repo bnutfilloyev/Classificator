@@ -1,4 +1,4 @@
-name: Deploy project with python 3.8
+name: deploy-master
 
 on:
     - push
