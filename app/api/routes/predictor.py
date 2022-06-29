@@ -1,4 +1,5 @@
-from typing import Any
+from tkinter import ANCHOR
+from typing import Any, List
 
 import joblib
 from core.errors import PredictException
@@ -10,7 +11,7 @@ from services.predict import MachineLearningModelHandlerScore as model
 router = APIRouter()
 
 get_prediction = lambda data_input: MachineLearningResponse(
-    model.predict(data_input, load_wrapper=joblib.load, method="predict_proba")
+    model.predict(data_input, load_wrapper=joblib.load)
 )
 
 
