@@ -8,3 +8,4 @@ uvicorn>=0.17.4
 scikit-learn
 plotly
 xgboost
+lucifer-ml
