@@ -12,7 +12,6 @@ router = APIRouter()
 get_prediction = lambda data_input: model.predict(data_input, load_wrapper=joblib.load)
 
 
-
 @router.get("/predict", response_model=MachineLearningResponse, name="predict:get-data")
 async def predict(data_input: GetPredictionRequest):
     input_data = data_input.dict()

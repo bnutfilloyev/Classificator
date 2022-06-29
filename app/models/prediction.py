@@ -14,6 +14,7 @@ class GetPredictionRequest(BaseModel):
     sit_ups_count: float
     broad_jumps: float
 
+
 class MachineLearningResponse(BaseModel):
     prediction: int
 
