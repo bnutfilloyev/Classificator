@@ -82,6 +82,7 @@ Application parts are:
     ├── services         - logic that is not just crud related.
     ├── datasets         - datasets for training and testing.
     ├── visualizations   - visualizations for dataset preview.
+    ├── notebooks        - notebooks for data analysis and visualization.
     └── main.py          - FastAPI application creation and configuration.
     │
     tests                  - pytest
