@@ -11,7 +11,7 @@ RUN pip install --upgrade pip && \
     poetry config virtualenvs.create false && \
     poetry install --no-dev
 
-RUN pip install lucifer-ml
+RUN pip install -r requirements.txt
 
 
 COPY . ./
