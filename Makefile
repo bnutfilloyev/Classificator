@@ -28,6 +28,7 @@ install: generate_dot_env
 	pip install --upgrade pip
 	pip install poetry
 	poetry install
+	pip install -r requirements.txt
 
 run:
 	PYTHONPATH=app/ poetry run python app/main.py
