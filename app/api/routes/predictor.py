@@ -1,11 +1,10 @@
-from tkinter import ANCHOR
 from typing import Any, List
 
 import joblib
 from core.errors import PredictException
 from fastapi import APIRouter, HTTPException
 from loguru import logger
-from models.prediction import HealthResponse, MachineLearningResponse
+from models.prediction import MachineLearningResponse
 from services.predict import MachineLearningModelHandlerScore as model
 
 router = APIRouter()
@@ -26,15 +25,3 @@ async def predict(data_input: Any = None):
 
     return MachineLearningResponse(prediction=prediction)
 
-
-@router.get(
-    "/health", response_model=HealthResponse, name="health:get-data",
-)
-async def health():
-    is_health = False
-    try:
-        get_prediction("lorem ipsum")
-        is_health = True
-        return HealthResponse(status=is_health)
-    except Exception:
-        raise HTTPException(status_code=404, detail="Unhealthy")

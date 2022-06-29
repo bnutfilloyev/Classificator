@@ -9,11 +9,9 @@ class MachineLearningModelHandlerScore(object):
     model = None
 
     @classmethod
-    def predict(cls, input, load_wrapper=None, method="predict"):
+    def predict(cls, input, load_wrapper=None):
         clf = cls.get_model(load_wrapper)
-        if hasattr(clf, method):
-            return getattr(clf, method)(input)
-        raise PredictException(f"'{method}' attribute is missing")
+        return clf.predict(input)
 
     @classmethod
     def get_model(cls, load_wrapper):
@@ -38,3 +36,4 @@ class MachineLearningModelHandlerScore(object):
             logger.error(message)
             raise ModelLoadException(message)
         return model
+
