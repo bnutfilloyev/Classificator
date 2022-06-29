@@ -11,7 +11,7 @@ class MachineLearningModelHandlerScore(object):
     @classmethod
     def predict(cls, input, load_wrapper=None):
         clf = cls.get_model(load_wrapper)
-        return clf.predict(input)
+        return clf.predict(input)[0]
 
     @classmethod
     def get_model(cls, load_wrapper):
@@ -36,4 +36,3 @@ class MachineLearningModelHandlerScore(object):
             logger.error(message)
             raise ModelLoadException(message)
         return model
-
