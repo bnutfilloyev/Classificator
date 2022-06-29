@@ -1,11 +1,1 @@
-fastapi==0.78.0
-joblib==1.1.0
-loguru==0.4.1
-pydantic==1.9.1
-pytest==5.4.3
-starlette>=0.17.1
-uvicorn>=0.17.4
-scikit-learn
-plotly
-xgboost
 lucifer-ml
